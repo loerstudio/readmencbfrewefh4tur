@@ -1,0 +1,3363 @@
+' <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Accesso</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style type="text/tailwindcss">
+    :root {
+      --primary-color: #EF4444;
+      --background-color: #111827;
+      --card-color: #1F2937;
+      --text-primary: #F9FAFB;
+      --text-secondary: #9CA3AF;
+      --input-bg: #374151;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+    .input-field {
+      @apply w-full bg-[var(--input-bg)] text-[var(--text-primary)] border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-[var(--primary-color)];
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-sm px-4">
+    <div class="text-center mb-12">
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co/tMVNDTV4/spc-app-logo.png" alt="spc-app-logo" border="0" class="mx-auto"></a>
+    </div>
+    <form class="space-y-8">
+      <div class="text-left">
+        <label class="sr-only" for="email">Email</label>
+        <div class="flex items-start gap-3">
+          <div class="w-16 flex flex-col items-center">
+            <span class="material-icons text-[var(--text-secondary)]">email</span>
+            <span class="mt-1 text-xs text-[var(--text-secondary)]">Email</span>
+          </div>
+          <input class="input-field flex-1" id="email" name="email" placeholder="nome@esempio.com" type="email"/>
+        </div>
+      </div>
+      <div class="text-left">
+        <label class="sr-only" for="password">Password</label>
+        <div class="flex items-start gap-3">
+          <div class="w-16 flex flex-col items-center">
+            <span class="material-icons text-[var(--text-secondary)]">lock</span>
+            <span class="mt-1 text-xs text-[var(--text-secondary)]">Password</span>
+          </div>
+          <input class="input-field flex-1" id="password" name="password" placeholder="••••••••" type="password"/>
+        </div>
+
+      </div>
+      <button class="w-full bg-[var(--primary-color)] text-white font-bold py-3 px-4 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--background-color)] focus:ring-[var(--primary-color)] transition duration-150 ease-in-out" type="submit">
+        Accedi
+      </button>
+    </form>
+  </div>
+</body>
+</html>  '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #111827;
+            --card-color: #1F2937;
+            --text-primary: #F9FAFB;
+            --text-secondary: #9CA3AF;
+            --input-bg: #374151;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+        }
+        .input-field {
+            @apply w-full bg-[var(--input-bg)] text-[var(--text-primary)] border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-[var(--primary-color)];
+        }
+    </style>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<header class="absolute top-0 left-0 w-full p-4">
+<a class="inline-flex items-center text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">
+<span class="material-icons">arrow_back_ios_new</span>
+</a>
+</header>
+<main class="flex-grow flex items-center justify-center">
+<div class="w-full max-w-sm px-4">
+<div class="text-center mb-8">
+<span class="material-icons text-[var(--primary-color)] text-6xl">
+                    lock_reset
+                </span>
+<h1 class="text-3xl font-bold mt-4">Forgot Password?</h1>
+<p class="text-[var(--text-secondary)] mt-2">No worries, we'll send you reset instructions.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-2" for="email">Email</label>
+<div class="relative">
+<span class="material-icons absolute inset-y-0 left-0 flex items-center pl-3 text-[var(--text-secondary)]">
+                            email
+                        </span>
+<input class="input-field pl-10" id="email" name="email" placeholder="Enter your email" type="email"/>
+</div>
+</div>
+<button class="w-full bg-[var(--primary-color)] text-white font-bold py-3 px-4 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--background-color)] focus:ring-[var(--primary-color)] transition duration-150 ease-in-out" type="submit">
+                    Reset Password
+                </button>
+</form>
+<div class="text-center mt-6">
+<a class="inline-flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)]" href="#">
+<span class="material-icons">arrow_back</span>
+                    Back to Log In
+                </a>
+</div>
+</div>
+</main>
+
+</body></html>' '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Email Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #111827;
+            --card-color: #1F2937;
+            --text-primary: #F9FAFB;
+            --text-secondary: #9CA3AF;
+            --input-bg: #374151;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+        }
+        .otp-input {
+            @apply w-12 h-14 bg-[var(--input-bg)] text-[var(--text-primary)] border-2 border-transparent rounded-lg text-center text-2xl font-bold focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] transition-all;
+        }
+    </style>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<header class="absolute top-0 left-0 w-full p-4">
+<a class="inline-flex items-center text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors" href="#">
+<span class="material-icons">arrow_back_ios_new</span>
+</a>
+</header>
+<main class="flex-grow flex items-center justify-center">
+<div class="w-full max-w-sm px-4">
+<div class="text-center mb-8">
+<span class="material-icons text-[var(--primary-color)] text-6xl">
+                mark_email_read
+            </span>
+<h1 class="text-3xl font-bold mt-4">Check your email</h1>
+<p class="text-[var(--text-secondary)] mt-2">We've sent a 6-digit code to <span class="text-[var(--text-primary)] font-medium">user@example.com</span>. Please enter it below.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-2 text-center" for="otp">Enter verification code</label>
+<div class="flex justify-center gap-2" id="otp-inputs">
+<input class="otp-input" id="otp-1" maxlength="1" type="text"/>
+<input class="otp-input" id="otp-2" maxlength="1" type="text"/>
+<input class="otp-input" id="otp-3" maxlength="1" type="text"/>
+<input class="otp-input" id="otp-4" maxlength="1" type="text"/>
+<input class="otp-input" id="otp-5" maxlength="1" type="text"/>
+<input class="otp-input" id="otp-6" maxlength="1" type="text"/>
+</div>
+</div>
+<button class="w-full bg-[var(--primary-color)] text-white font-bold py-3 px-4 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--background-color)] focus:ring-[var(--primary-color)] transition duration-150 ease-in-out" type="submit">
+                Verify
+            </button>
+</form>
+<div class="text-center mt-6">
+<p class="text-sm text-[var(--text-secondary)]">
+                Didn't receive the code?
+                <a class="font-medium text-[var(--primary-color)] hover:underline" href="#">Resend Code</a>
+</p>
+</div>
+</div>
+</main>
+<script>
+    const inputs = document.getElementById('otp-inputs');
+    inputs.addEventListener('input', function(e) {
+        const target = e.target;
+        const val = target.value;
+        if (isNaN(val)) {
+            target.value = '';
+            return;
+        }
+        if (val != '') {
+            const next = target.nextElementSibling;
+            if (next) {
+                next.focus();
+            }
+        }
+    });
+    inputs.addEventListener('keyup', function(e) {
+        const target = e.target;
+        const key = e.key.toLowerCase();
+        if (key == 'backspace' || key == 'delete') {
+            target.value = '';
+            const prev = target.previousElementSibling;
+            if (prev) {
+                prev.focus();
+            }
+            return;
+        }
+    });
+</script>
+
+</body></html>' paginahomeclienti'<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home - Fitness App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;--background-color: #000000;
+            --surface-color: #1F2937;--text-primary-color: #FFFFFF;
+            --text-secondary-color: #9CA3AF;--text-accent-color: #F87171;}
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary-color);
+            font-family: 'Inter', sans-serif;
+        }
+        .icon-btn {
+            @apply bg-[var(--surface-color)] p-2 rounded-full;
+        }
+        .card {
+            @apply bg-[var(--surface-color)] rounded-xl p-4;
+        }
+        .nav-active {
+            @apply text-[var(--primary-color)] border-t-2 border-[var(--primary-color)];
+        }
+        .nav-inactive {
+            @apply text-[var(--text-secondary-color)];
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4 space-y-6">
+<header class="flex justify-between items-center">
+<div class="flex items-center space-x-3">
+<img alt="User avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIh-Y5JDcYSLCJQcZtU8awlncY_OF7KgjKVDqLKkhHjQCwXxGm_dqlYhOtPI_jpz_JC6rxefzI2aRvT4rfk8LBU4W85q_mvs7dy03kqbVmaKZg0CWQySHzccxq39sYEgZTuvXmDeqU2gxU0Bli87hu8Z-7yDReFyPrPdWQiAdp6JaifOsy8CUYeZ4mDdDXiRJFGz7KVr1hynuBADyhHLnxoUD3IoyPgWwxBZjUo4f3oO69u2GVBMMr40UaGDubqUDa1FLDz7Tz714"/>
+<div>
+<p class="text-sm text-[var(--text-secondary-color)]">Buongiorno</p>
+<h1 class="text-xl font-bold">Sofia</h1>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<button class="icon-btn">
+<span class="material-icons">dark_mode</span>
+</button>
+<button class="icon-btn relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-[var(--primary-color)]"></span>
+</button>
+<button class="icon-btn">
+<span class="material-icons">settings</span>
+</button>
+</div>
+</header>
+<div class="card flex justify-between items-center">
+<div>
+<h2 class="font-semibold text-lg">Calorie</h2>
+<p class="text-3xl font-bold">1.280 <span class="text-base font-normal text-[var(--text-secondary-color)]">/ 2.100 kCal</span></p>
+</div>
+<div class="w-24 h-24 relative">
+<svg class="w-full h-full" viewBox="0 0 36 36">
+<path class="text-gray-700" d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-[var(--primary-color)]" d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="61, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-lg font-bold">61%</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-semibold">Il mio workout</h2>
+<a class="text-sm text-[var(--text-accent-color)]" href="#">Vedi tutto</a>
+</div>
+<div class="card">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold">Total Body Settimana 1</h3>
+<p class="text-gray-400 text-sm">3 di 5 workout completati</p>
+<div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
+<div class="bg-[var(--primary-color)] h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<button class="text-[var(--primary-color)]">
+<span class="material-icons text-3xl">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-semibold">Alimentazione</h2>
+<a class="text-sm text-[var(--text-accent-color)]" href="#">Vedi tutto</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="card text-center">
+<span class="material-icons text-3xl text-[var(--text-accent-color)]">local_fire_department</span>
+<p class="font-semibold mt-2">Proteine</p>
+<p class="text-sm text-[var(--text-secondary-color)]">120g / 150g</p>
+</div>
+<div class="card text-center">
+<span class="material-icons text-3xl text-blue-400">water_drop</span>
+<p class="font-semibold mt-2">Acqua</p>
+<p class="text-sm text-[var(--text-secondary-color)]">6 / 8 bicchieri</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-800 rounded-xl p-4 flex items-center space-x-4">
+<span class="material-icons text-4xl text-[var(--primary-color)]">live_tv</span>
+<div>
+<h3 class="font-bold text-lg">Live Workout</h3>
+<p class="text-sm text-gray-400">Unisciti a una sessione live adesso</p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center nav-active px-4 pt-2" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+</body></html>' paginaprofiloclienti '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profilo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --background-dark: #121212;
+            --background-light: #1E1E1E;
+            --primary-accent: #E53935;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --border-color: #2D2D2D;
+            --success-color: #4CAF50;
+        }
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .icon-button {
+            @apply flex items-center justify-center w-10 h-10 rounded-full bg-[var(--background-light)];
+        }
+        .profile-stat {
+            @apply text-center;
+        }
+        .profile-stat-value {
+            @apply text-lg font-bold;
+        }
+        .profile-stat-label {
+            @apply text-sm text-[var(--text-secondary)];
+        }
+        .settings-item {
+            @apply flex items-center justify-between py-4;
+        }
+        .settings-item-content {
+            @apply flex items-center space-x-4;
+        }
+        .settings-icon {
+            @apply text-[var(--primary-accent)];
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="p-4">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-3xl font-bold">Profilo</h1>
+<button class="icon-button">
+<span class="material-icons">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col items-center mb-8">
+<div class="relative mb-4">
+<img alt="User profile picture" class="w-24 h-24 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVXMTdjlEQyHKXVfU_bIxKju0BHK_xOEbkwkfHgZJ1DNjekLkSHAKYdTU7Dpc5vp-4LNmko7yGQvjRyrqZScNyaaNhUpXVSpSxAkw-7Bxv7y6JfJQmGQlNRVre9e2cQm9VJ9MEVDQluyA4cWz6bmyCZbZ9VlshFPYXEl01BaKHe1YuiHlBr_XTXv055pxMWyeAFow9ZBTd8eMMIKttCOKuD4EyrVVbWAsgvmW1mwCHWDCFC4xzrQdQCGmlVMuD2qrmXRphSuYNZaY"/>
+<button class="absolute bottom-0 right-0 bg-[var(--primary-accent)] p-1 rounded-full">
+<span class="material-icons text-sm">edit</span>
+</button>
+</div>
+<h2 class="text-xl font-semibold">Mario Rossi</h2>
+<p class="text-[var(--text-secondary)] text-sm">mario.rossi@email.com</p>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8 bg-[var(--background-light)] p-4 rounded-xl">
+<div class="profile-stat">
+<p class="profile-stat-value">78kg</p>
+<p class="profile-stat-label">Peso</p>
+</div>
+<div class="profile-stat">
+<p class="profile-stat-value">182cm</p>
+<p class="profile-stat-label">Altezza</p>
+</div>
+<div class="profile-stat">
+<p class="profile-stat-value">22%</p>
+<p class="profile-stat-label">Grasso C.</p>
+</div>
+</div>
+<div class="bg-[var(--background-light)] rounded-xl p-4">
+<div class="settings-item border-b border-[var(--border-color)]">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">person</span>
+<span>Informazioni Personali</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</div>
+<div class="settings-item border-b border-[var(--border-color)]">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">notifications</span>
+<span>Notifiche</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</div>
+<div class="settings-item border-b border-[var(--border-color)]">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">security</span>
+<span>Sicurezza</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</div>
+<div class="settings-item">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">help_outline</span>
+<span>Aiuto &amp; Supporto</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full flex items-center justify-center space-x-2 py-3 text-lg text-[var(--primary-accent)]">
+<span class="material-icons">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</div>
+</body></html>' paginawokroutclienti'<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+    .tab-active {
+      @apply border-b-2 border-red-500 text-white;
+    }
+    .tab-inactive {
+      @apply text-gray-500;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Workout</h1>
+<div class="flex space-x-3">
+<button class="bg-gray-800 p-2 rounded-full">
+<span class="material-icons">search</span>
+</button>
+<button class="bg-gray-800 p-2 rounded-full">
+<span class="material-icons">calendar_today</span>
+</button>
+</div>
+</div>
+<div class="flex border-b border-gray-700 mb-6">
+<button class="flex-1 py-2 text-center tab-active font-semibold">Programmi</button>
+<button class="flex-1 py-2 text-center tab-inactive">Esercizi</button>
+<button class="flex-1 py-2 text-center tab-inactive">Cronologia</button>
+</div>
+<button class="w-full bg-red-500 text-white font-bold py-4 rounded-lg flex items-center justify-center space-x-2 mb-6">
+<span class="material-icons">sensors</span>
+<span>Live Workout</span>
+</button>
+<h2 class="text-xl font-semibold mb-4">I Miei Programmi</h2>
+<div class="space-y-4">
+<div class="bg-gray-900 rounded-lg p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold">Total Body Settimana 1</h3>
+<p class="text-gray-400 text-sm">3 di 5 workout completati</p>
+<div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
+<div class="bg-red-500 h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+</div>
+<button class="text-red-500">
+<span class="material-icons text-3xl">play_circle</span>
+</button>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg p-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold">Gambe e Glutei</h3>
+<p class="text-gray-400 text-sm">Workout Personalizzato</p>
+</div>
+<button class="text-red-500">
+<span class="material-icons text-3xl">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-red-500 border-t-2 border-red-500 px-4 pt-2" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+
+</body></html>'  pageperclientiperselezionaregiornoperavviare log/live workout '<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live Workout Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+        .day-card {
+            background-color: #1a1a1a;
+        }
+        .day-card.completed {
+            background-color: #282828;
+            border-color: #383838;
+        }
+        .day-card.completed .text-gray-400 {
+            color: #6b7280;
+        }
+        .day-card.active {
+            border-color: #ef4444;
+            background: linear-gradient(to right, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0));
+        }
+        .day-card.active .text-red-500 {
+            color: #ef4444;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<div class="flex-grow p-4">
+<div class="flex items-center mb-6">
+<button class="mr-4">
+<span class="material-icons text-3xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-2xl font-bold">Total Body Settimana 1</h1>
+</div>
+<h2 class="text-xl font-semibold mb-4 text-gray-300">Seleziona il giorno</h2>
+<div class="space-y-4">
+<div class="day-card rounded-lg p-4 border-2 border-transparent flex justify-between items-center completed">
+<div>
+<h3 class="text-lg font-bold text-gray-500">Giorno 1 - Petto e Tricipiti</h3>
+<p class="text-sm text-gray-400">Completato</p>
+</div>
+<span class="material-icons text-green-500 text-3xl">check_circle</span>
+</div>
+<div class="day-card rounded-lg p-4 border-2 border-transparent flex justify-between items-center completed">
+<div>
+<h3 class="text-lg font-bold text-gray-500">Giorno 2 - Schiena e Bicipiti</h3>
+<p class="text-sm text-gray-400">Completato</p>
+</div>
+<span class="material-icons text-green-500 text-3xl">check_circle</span>
+</div>
+<div class="day-card active rounded-lg p-4 border-2 flex justify-between items-center">
+<div>
+<h3 class="text-lg font-bold">Giorno 3 - Gambe e Addome</h3>
+<p class="text-sm text-red-500">Prossimo workout</p>
+</div>
+<span class="material-icons text-red-500 text-3xl">radio_button_unchecked</span>
+</div>
+<div class="day-card rounded-lg p-4 border-2 border-transparent flex justify-between items-center">
+<div>
+<h3 class="text-lg font-bold">Giorno 4 - Riposo</h3>
+<p class="text-sm text-gray-400">Giorno di riposo</p>
+</div>
+<span class="material-icons text-gray-500 text-3xl">radio_button_unchecked</span>
+</div>
+<div class="day-card rounded-lg p-4 border-2 border-transparent flex justify-between items-center">
+<div>
+<h3 class="text-lg font-bold">Giorno 5 - Spalle e Cardio</h3>
+<p class="text-sm text-gray-400">4 esercizi</p>
+</div>
+<span class="material-icons text-gray-500 text-3xl">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+<div class="px-4 pb-6 mt-auto">
+<button class="w-full bg-red-500 text-white font-bold py-4 rounded-lg flex items-center justify-center space-x-2">
+<span class="material-icons">play_arrow</span>
+<span>Inizia Workout</span>
+</button>
+</div>
+
+</body></html>' live/logworkout stile evolution fit'<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workout Log - Fitness App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1F2937;
+            --surface-color-2: #374151;
+            --text-primary-color: #FFFFFF;
+            --text-secondary-color: #9CA3AF;
+            --text-accent-color: #F87171;
+            --success-color: #4ADE80;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary-color);
+            font-family: 'Inter', sans-serif;
+        }
+        .icon-btn {
+            @apply bg-[var(--surface-color)] p-2 rounded-full;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="flex flex-col h-full">
+<header class="p-4 flex justify-between items-center sticky top-0 bg-black z-10">
+<a class="text-white" href="#">
+<span class="material-icons">arrow_back_ios_new</span>
+</a>
+<h1 class="text-xl font-bold">Bench Press</h1>
+<button class="icon-btn">
+<span class="material-icons">more_horiz</span>
+</button>
+</header>
+<main class="flex-grow p-4 space-y-6">
+<div class="relative">
+<img alt="Bench Press" class="w-full h-48 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ArBUXr-wkASo7CL7LTfvHmsntTbuRUukDfxTRk9OnJm8j5QeuXIHfRkwMNB9osBrL24ISdMDIMtygcrgbXy0EhIlUiu_glzz1-VDEyODXoEZXO_7_xbQ-jXWXvwNvm1K4qXAQ0TjQb358W9LqLd5JL3cKXhUJ0VIda-Borrf36-WKDf60e9timBECkwhUrOYUvLVbb4yzGsbhFX7KfK0lt44Rw_H3lxr4I4K77Zej9k-_XEdSA5pMeKV8mZRriUUilTHKaEmXw4"/>
+<div class="absolute bottom-2 right-2 bg-black bg-opacity-50 rounded-full px-3 py-1 text-sm font-semibold">
+                    1/5
+                </div>
+</div>
+<div class="text-center space-y-2">
+<p class="text-sm text-[var(--text-secondary-color)]">Riposo</p>
+<p class="text-5xl font-bold">00:45</p>
+<div class="flex justify-center space-x-2">
+<button class="bg-[var(--surface-color-2)] text-white font-semibold py-2 px-4 rounded-full">-10s</button>
+<button class="bg-[var(--primary-color)] text-white font-bold p-4 rounded-full">
+<span class="material-icons text-4xl">pause</span>
+</button>
+<button class="bg-[var(--surface-color-2)] text-white font-semibold py-2 px-4 rounded-full">+10s</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center bg-[var(--surface-color)] p-3 rounded-lg">
+<span class="font-semibold">Serie 1</span>
+<div class="flex items-center space-x-4">
+<span class="text-sm">8 Rep</span>
+<span class="text-sm">50 Kg</span>
+<button class="w-6 h-6 rounded-full bg-[var(--success-color)] flex items-center justify-center">
+<span class="material-icons text-black text-base">check</span>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-center bg-[var(--surface-color)] p-3 rounded-lg">
+<span class="font-semibold">Serie 2</span>
+<div class="flex items-center space-x-4">
+<span class="text-sm">8 Rep</span>
+<span class="text-sm">50 Kg</span>
+<button class="w-6 h-6 rounded-full border-2 border-[var(--text-secondary-color)] flex items-center justify-center">
+</button>
+</div>
+</div>
+<div class="flex justify-between items-center bg-[var(--surface-color)] p-3 rounded-lg">
+<span class="font-semibold">Serie 3</span>
+<div class="flex items-center space-x-4">
+<span class="text-sm">8 Rep</span>
+<span class="text-sm">50 Kg</span>
+<button class="w-6 h-6 rounded-full border-2 border-[var(--text-secondary-color)] flex items-center justify-center">
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center space-x-2">
+<button class="w-full bg-[var(--surface-color-2)] text-white font-bold py-3 rounded-lg text-base">Note</button>
+<button class="w-full bg-[var(--surface-color-2)] text-white font-bold py-3 rounded-lg text-base">Storico</button>
+</div>
+</main>
+<footer class="p-4 sticky bottom-0 bg-black">
+<div class="flex justify-between items-center">
+<button class="flex items-center space-x-2 text-[var(--text-secondary-color)]">
+<span class="material-icons">skip_previous</span>
+<span>Precedente</span>
+</button>
+<button class="flex items-center space-x-2 text-white">
+<span>Prossimo</span>
+<span class="material-icons">skip_next</span>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>' pageclientiepianoalimentare '<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alimentazione</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4">
+<h1 class="text-4xl font-bold mb-6">Alimentazione</h1>
+<div class="flex space-x-4 mb-6">
+<button class="bg-red-600 text-white py-2 px-4 rounded-full">La mia dieta</button>
+<button class="text-gray-400">Diario</button>
+<button class="text-gray-400">Grafici</button>
+</div>
+<div class="bg-red-600 rounded-lg p-6 mb-6">
+<p class="text-sm">Obiettivo Giornaliero</p>
+<p class="text-5xl font-bold mb-4">3000 kcal</p>
+<div class="flex justify-around items-center mb-4">
+<div class="text-center">
+<div class="bg-red-500 rounded-full w-20 h-20 flex items-center justify-center mb-2">
+<span class="text-2xl font-bold">180g</span>
+</div>
+<p class="text-sm">Proteine</p>
+</div>
+<div class="text-center">
+<div class="bg-red-500 rounded-full w-20 h-20 flex items-center justify-center mb-2">
+<span class="text-2xl font-bold">350g</span>
+</div>
+<p class="text-sm">Carboidrati</p>
+</div>
+<div class="text-center">
+<div class="bg-red-500 rounded-full w-20 h-20 flex items-center justify-center mb-2">
+<span class="text-2xl font-bold">80g</span>
+</div>
+<p class="text-sm">Grassi</p>
+</div>
+</div>
+<div class="relative pt-1">
+<div class="overflow-hidden h-2 mb-2 text-xs flex rounded bg-white/30">
+<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-white" style="width: 21.66%"></div>
+</div>
+<p class="text-sm text-right">650 / 3000 kcal consumate</p>
+</div>
+</div>
+<button class="w-full bg-gray-800 text-white py-4 px-4 rounded-xl flex items-center justify-center space-x-2 text-lg mb-6">
+<span class="material-icons">photo_camera</span>
+<span>Scansiona Alimento con AI</span>
+</button>
+<div class="bg-gray-900 rounded-lg p-4">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="text-xl font-semibold">Colazione</h2>
+<p class="text-gray-400 text-sm">07:00 - 09:00</p>
+</div>
+<span class="material-icons text-green-500 text-3xl">check_circle</span>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-red-500 border-t-2 border-red-500 px-4 pt-2" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center text-gray-400" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+
+</body></html>'  pagescanfoodai foto '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Food Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;--background-color: #000000;
+            --surface-color: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A3A3A3;--accent-color: #332929;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .icon-btn {
+            @apply bg-[var(--surface-color)] p-4 rounded-full;
+        }
+        .main-content {
+            flex-grow: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black text-white">
+<div class="main-content flex flex-col">
+<header class="p-4 flex justify-between items-center">
+<button class="text-white">
+<span class="material-icons text-3xl">close</span>
+</button>
+<button class="text-white">
+<span class="material-icons text-3xl">help_outline</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center p-4 text-center">
+<h1 class="text-2xl font-bold mb-2">Scan your food</h1>
+<p class="text-[var(--text-secondary)] mb-8">Place your food in the center of the frame</p>
+<div class="w-full aspect-square bg-gray-800 rounded-3xl flex items-center justify-center mb-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-white rounded-tl-2xl"></div>
+<div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-white rounded-tr-2xl"></div>
+<div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-white rounded-bl-2xl"></div>
+<div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-white rounded-br-2xl"></div>
+<div class="w-full h-full bg-gray-900"></div>
+</div>
+<div class="flex items-center justify-around w-full px-4">
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">photo_library</span>
+<span class="text-sm mt-1">Gallery</span>
+</button>
+<button class="w-20 h-20 bg-[var(--primary-color)] rounded-full flex items-center justify-center shadow-lg transform scale-125">
+<span class="material-icons text-white text-5xl">photo_camera</span>
+</button>
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">flash_on</span>
+<span class="text-sm mt-1">Flash</span>
+</button>
+</div>
+</main>
+</div>
+<footer class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-[var(--primary-color)] border-t-2 border-[var(--primary-color)] px-4 pt-2" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Nutrition</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progress</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</footer>
+
+</body></html>' errore output non e cibo riconoscimento cliente '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Food Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A3A3A3;
+            --accent-color: #332929;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .icon-btn {
+            @apply bg-[var(--surface-color)] p-4 rounded-full;
+        }
+        .main-content {
+            flex-grow: 1;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black text-white">
+<div class="main-content flex flex-col relative">
+<header class="p-4 flex justify-between items-center z-10">
+<button class="text-white">
+<span class="material-icons text-3xl">close</span>
+</button>
+<button class="text-white">
+<span class="material-icons text-3xl">help_outline</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center p-4 text-center z-10">
+<h1 class="text-2xl font-bold mb-2">Scan your food</h1>
+<p class="text-[var(--text-secondary)] mb-8">Place your food in the center of the frame</p>
+<div class="w-full aspect-square bg-gray-800 rounded-3xl flex items-center justify-center mb-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-white rounded-tl-2xl"></div>
+<div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-white rounded-tr-2xl"></div>
+<div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-white rounded-bl-2xl"></div>
+<div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-white rounded-br-2xl"></div>
+<div class="w-full h-full bg-gray-900"></div>
+</div>
+<div class="flex items-center justify-around w-full px-4">
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">photo_library</span>
+<span class="text-sm mt-1">Gallery</span>
+</button>
+<button class="w-20 h-20 bg-[var(--primary-color)] rounded-full flex items-center justify-center shadow-lg transform scale-125">
+<span class="material-icons text-white text-5xl">photo_camera</span>
+</button>
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">flash_on</span>
+<span class="text-sm mt-1">Flash</span>
+</button>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-[var(--primary-color)] border-t-2 border-[var(--primary-color)] px-4 pt-2" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Nutrition</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progress</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</footer>
+<div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end items-center z-20">
+<div class="bg-[var(--surface-color)] rounded-t-3xl p-6 w-full max-w-md text-center">
+<div class="w-12 h-1.5 bg-gray-600 rounded-full mx-auto mb-6"></div>
+<div class="bg-red-200 p-3 rounded-full inline-flex items-center justify-center mb-4">
+<span class="material-icons text-red-600 text-3xl">error_outline</span>
+</div>
+<h2 class="text-xl font-bold mb-2">Hmm, we can't find that food</h2>
+<p class="text-[var(--text-secondary)] mb-6">Our AI couldn't recognize the item. Please try again.</p>
+<div class="flex flex-col space-y-4">
+<button class="bg-[var(--primary-color)] text-white font-bold py-4 rounded-xl">Try again</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>' output successo questo e cibo cliente '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Food Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A3A3A3;
+            --accent-color: #332929;
+            --success-color: #4CAF50;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .icon-btn {
+            @apply bg-[var(--surface-color)] p-4 rounded-full;
+        }
+        .main-content {
+            flex-grow: 1;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black text-white">
+<div class="main-content flex flex-col relative">
+<header class="p-4 flex justify-between items-center z-10">
+<button class="text-white">
+<span class="material-icons text-3xl">close</span>
+</button>
+<button class="text-white">
+<span class="material-icons text-3xl">help_outline</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center p-4 text-center z-10">
+<h1 class="text-2xl font-bold mb-2">Scan your food</h1>
+<p class="text-[var(--text-secondary)] mb-8">Place your food in the center of the frame</p>
+<div class="w-full aspect-square bg-gray-800 rounded-3xl flex items-center justify-center mb-8 relative overflow-hidden">
+<img alt="Bowl of salad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZTn6vhQXdBLHzjPnCAKTyL_jlMmelo3EF0nRwB3gBzhPEJIlHw5OIs2kSIVjqHP3XX1MBwxW1BjMux_jC75kWZl3jX7LtjVi6m9epPbavCpWYsIasb9mAQlxGAa3Y07pIXIWq0JMaVQi7NHDpYcl2OVP8273SCy2QKvVgQtFRtRB6J4jwyIQ7B0eLxJ-YhjswlZh8DWX7yP2qm9cLewadfYWSWyjoNtw3LFbljccocRr_QO8VvEkpjD3U63C5FPmj1yzCCHAH7M"/>
+<div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[var(--success-color)] rounded-tl-2xl"></div>
+<div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-[var(--success-color)] rounded-tr-2xl"></div>
+<div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-[var(--success-color)] rounded-bl-2xl"></div>
+<div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[var(--success-color)] rounded-br-2xl"></div>
+</div>
+<div class="flex items-center justify-around w-full px-4">
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">photo_library</span>
+<span class="text-sm mt-1">Gallery</span>
+</button>
+<button class="w-20 h-20 bg-[var(--primary-color)] rounded-full flex items-center justify-center shadow-lg transform scale-125">
+<span class="material-icons text-white text-5xl">photo_camera</span>
+</button>
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons text-4xl">flash_on</span>
+<span class="text-sm mt-1">Flash</span>
+</button>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-[var(--primary-color)] border-t-2 border-[var(--primary-color)] px-4 pt-2" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Nutrition</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progress</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</footer>
+<div class="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-end items-center z-20">
+<div class="bg-[var(--surface-color)] rounded-t-3xl p-6 w-full max-w-md text-left">
+<div class="w-12 h-1.5 bg-gray-600 rounded-full mx-auto mb-6"></div>
+<div class="flex items-center mb-4">
+<div class="bg-green-200 p-3 rounded-full inline-flex items-center justify-center mr-4">
+<span class="material-icons text-[var(--success-color)] text-3xl">check_circle</span>
+</div>
+<div>
+<h2 class="text-xl font-bold">Food Identified!</h2>
+<p class="text-[var(--text-secondary)]">We found a match for your food.</p>
+</div>
+</div>
+<div class="bg-[var(--accent-color)] rounded-2xl p-4 mb-6">
+<h3 class="font-bold text-lg mb-2">Mixed Greens Salad</h3>
+<div class="flex items-center justify-between text-[var(--text-secondary)] text-sm mb-4">
+<span>1 serving (250g)</span>
+<span class="text-[var(--primary-color)] font-semibold">250 kcal</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-semibold text-white">20g</p>
+<p class="text-xs text-[var(--text-secondary)]">Carbs</p>
+</div>
+<div>
+<p class="font-semibold text-white">10g</p>
+<p class="text-xs text-[var(--text-secondary)]">Protein</p>
+</div>
+<div>
+<p class="font-semibold text-white">15g</p>
+<p class="text-xs text-[var(--text-secondary)]">Fat</p>
+</div>
+<div>
+<p class="font-semibold text-white">5g</p>
+<p class="text-xs text-[var(--text-secondary)]">Fiber</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<button class="bg-[var(--primary-color)] text-white font-bold py-4 rounded-xl">Add to Diary</button>
+<button class="bg-transparent border border-[var(--text-secondary)] text-[var(--text-secondary)] font-bold py-4 rounded-xl">Scan another item</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>' pagina cliente progressi '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progress - Fitness App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #EF4444;
+      --background-color: #000000;
+      --surface-color: #1F2937;
+      --text-primary-color: #FFFFFF;
+      --text-secondary-color: #9CA3AF;
+      --text-accent-color: #F87171;
+      --green-color: #4ADE80;
+    }
+    body {
+      background-color: var(--background-color);
+      color: var(--text-primary-color);
+      font-family: 'Inter', sans-serif;
+    }
+    .icon-btn {
+      @apply bg-[var(--surface-color)] p-2 rounded-full;
+    }
+    .card {
+      @apply bg-[var(--surface-color)] rounded-xl p-4;
+    }
+    .nav-active {
+      @apply text-[var(--primary-color)];
+    }
+    .nav-inactive {
+      @apply text-[var(--text-secondary-color)];
+    }
+    .tab-active {
+      @apply bg-[var(--primary-color)] text-white;
+    }
+    .tab-inactive {
+      @apply bg-transparent text-[var(--text-secondary-color)];
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4 space-y-6">
+<header class="flex justify-between items-center">
+<h1 class="text-xl font-bold">Progressi</h1>
+<button class="icon-btn">
+<span class="material-icons">more_horiz</span>
+</button>
+</header>
+<div class="card">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-semibold text-lg">Statistiche</h2>
+<div class="bg-black rounded-full p-1 flex text-xs">
+<button class="px-3 py-1 rounded-full tab-active">Settimana</button>
+<button class="px-3 py-1 rounded-full tab-inactive">Mese</button>
+<button class="px-3 py-1 rounded-full tab-inactive">Anno</button>
+</div>
+</div>
+<div class="flex justify-between text-center text-sm mb-4">
+<div>
+<p class="text-[var(--text-secondary-color)]">Workout</p>
+<p class="font-bold">4</p>
+</div>
+<div>
+<p class="text-[var(--text-secondary-color)]">kCal</p>
+<p class="font-bold">1.520</p>
+</div>
+<div>
+<p class="text-[var(--text-secondary-color)]">Minuti</p>
+<p class="font-bold">180</p>
+</div>
+</div>
+<div class="h-48">
+<div class="h-full flex items-end space-x-2">
+<div class="flex-1 text-center">
+<div class="bg-gray-700 rounded-t-lg" style="height: 60%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Lun</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-[var(--primary-color)] rounded-t-lg" style="height: 80%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Mar</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-gray-700 rounded-t-lg" style="height: 50%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Mer</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-[var(--primary-color)] rounded-t-lg" style="height: 90%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Gio</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-gray-700 rounded-t-lg" style="height: 40%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Ven</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-gray-700 rounded-t-lg" style="height: 70%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Sab</p>
+</div>
+<div class="flex-1 text-center">
+<div class="bg-[var(--primary-color)] rounded-t-lg" style="height: 100%;"></div>
+<p class="text-xs text-[var(--text-secondary-color)] mt-1">Dom</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold mb-4">Peso Corporeo</h2>
+<div class="card space-y-4">
+<div class="flex justify-between items-center">
+<div>
+<p class="text-3xl font-bold">75,5 <span class="text-base font-normal text-[var(--text-secondary-color)]">kg</span></p>
+<p class="text-sm text-[var(--green-color)] flex items-center">
+<span class="material-icons text-base">arrow_downward</span>
+              -0,5kg questa settimana
+            </p>
+</div>
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-full font-semibold text-sm">Aggiungi peso</button>
+</div>
+<div class="h-32 bg-gray-800 rounded-lg flex items-center justify-center">
+<p class="text-sm text-gray-500">Grafico andamento peso</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold mb-4">I miei record</h2>
+<div class="space-y-3">
+<div class="card flex justify-between items-center">
+<div>
+<p class="font-semibold">Panca piana</p>
+<p class="text-sm text-[var(--text-secondary-color)]">80kg x 5 reps</p>
+</div>
+<span class="material-icons text-[var(--text-secondary-color)]">chevron_right</span>
+</div>
+<div class="card flex justify-between items-center">
+<div>
+<p class="font-semibold">Squat</p>
+<p class="text-sm text-[var(--text-secondary-color)]">100kg x 3 reps</p>
+</div>
+<span class="material-icons text-[var(--text-secondary-color)]">chevron_right</span>
+</div>
+<div class="card flex justify-between items-center">
+<div>
+<p class="font-semibold">Corsa</p>
+<p class="text-sm text-[var(--text-secondary-color)]">5km in 25 minuti</p>
+</div>
+<span class="material-icons text-[var(--text-secondary-color)]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black flex justify-around items-center pt-2 pb-5 border-t border-gray-800">
+<a class="text-center nav-inactive flex flex-col items-center gap-1" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center nav-inactive flex flex-col items-center gap-1" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center nav-inactive flex flex-col items-center gap-1" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Dieta</span>
+</a>
+<a class="text-center nav-active flex flex-col items-center gap-1" href="#">
+<span class="material-icons">bar_chart</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center nav-inactive flex flex-col items-center gap-1" href="#">
+<span class="material-icons">person</span>
+<span class="block text-xs">Profilo</span>
+</a>
+</div>
+
+</body></html>' pagina cliente chat '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat - Fitness App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #EF4444;
+      --background-color: #000000;
+      --surface-color: #1F2937;
+      --text-primary-color: #FFFFFF;
+      --text-secondary-color: #9CA3AF;
+      --text-accent-color: #F87171;
+      --green-color: #4ADE80;
+    }
+    body {
+      background-color: var(--background-color);
+      color: var(--text-primary-color);
+      font-family: 'Inter', sans-serif;
+    }
+    .icon-btn {
+      @apply bg-[var(--surface-color)] p-2 rounded-full;
+    }
+    .nav-active {
+      @apply text-[var(--primary-color)] border-t-2 border-[var(--primary-color)];
+    }
+    .nav-inactive {
+      @apply text-[var(--text-secondary-color)];
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col h-screen">
+<header class="flex justify-between items-center p-4 border-b border-gray-700">
+<div class="flex items-center space-x-3">
+<button>
+<span class="material-icons">arrow_back_ios</span>
+</button>
+<div class="flex items-center space-x-2">
+<div class="relative">
+<img alt="Coach Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASPKVheqt3sKFmbC-bghy-rzW96w8EU2mt_h826ChFHdWnt4kHdT2tLgeAzaBhXxJ8Mv1QGUU_cV9fgQCMkn8Y2-G_yFqvdLZel6AF1uDXlN96Hh-DuEh8Fk6PJ3xITCxOuiH1BcVL3czrEnQ6VMgnHIjjoJdGLjmtSL5kX1fXd_dGaFjEiRaIPG9DFr8aOMgdBXxsBA_er5mdCFoBXRaUcxbI4ShQiBAmKgFrUdi8job2chDN1vkzOxm9u9DM8lYJA6lbM6TgjU"/>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-[var(--green-color)] ring-2 ring-black"></span>
+</div>
+<div>
+<h1 class="text-lg font-bold">Coach Lisa</h1>
+<p class="text-xs text-[var(--text-secondary-color)]">Online</p>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="icon-btn">
+<span class="material-icons text-xl">videocam</span>
+</button>
+<button class="icon-btn">
+<span class="material-icons text-xl">call</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="text-center text-xs text-[var(--text-secondary-color)] my-4">Oggi</div>
+<div class="flex justify-start">
+<div class="bg-[var(--surface-color)] rounded-2xl rounded-bl-none p-3 max-w-xs">
+<p class="text-sm">Ciao! Come sta andando l'allenamento di oggi?</p>
+<p class="text-xs text-right text-[var(--text-secondary-color)] mt-1">10:00</p>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="bg-[var(--primary-color)] rounded-2xl rounded-br-none p-3 max-w-xs">
+<p class="text-sm">Ciao Lisa! Bene, ho appena finito la sessione di gambe. È stata dura ma mi sento benissimo!</p>
+<p class="text-xs text-right text-gray-200 mt-1">10:02</p>
+</div>
+</div>
+<div class="flex justify-start">
+<div class="bg-[var(--surface-color)] rounded-2xl rounded-bl-none p-3 max-w-xs">
+<p class="text-sm">Ottimo lavoro! Ricordati di fare stretching e di idratarti bene. Hai domande sul piano alimentare di oggi?</p>
+<p class="text-xs text-right text-[var(--text-secondary-color)] mt-1">10:03</p>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="bg-[var(--primary-color)] rounded-2xl rounded-br-none p-3 max-w-xs">
+<p class="text-sm">Tutto chiaro! Per la cena, posso sostituire il salmone con il petto di pollo? Ho dimenticato di comprarlo.</p>
+<p class="text-xs text-right text-gray-200 mt-1">10:05</p>
+</div>
+</div>
+<div class="flex justify-start">
+<div class="bg-[var(--surface-color)] rounded-2xl rounded-bl-none p-3 max-w-xs">
+<p class="text-sm">Certo, va benissimo. Assicurati che sia circa la stessa grammatura. Continua così! 💪</p>
+<p class="text-xs text-right text-[var(--text-secondary-color)] mt-1">10:06</p>
+</div>
+</div>
+</main>
+<footer class="p-4 border-t border-gray-700 bg-black">
+<div class="flex items-center bg-[var(--surface-color)] rounded-full p-2">
+<button class="text-[var(--text-secondary-color)] px-2">
+<span class="material-icons">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm placeholder:text-[var(--text-secondary-color)]" placeholder="Scrivi un messaggio..." type="text"/>
+<button class="text-[var(--text-secondary-color)] px-2">
+<span class="material-icons">mic</span>
+</button>
+<button class="bg-[var(--primary-color)] rounded-full p-2 ml-2">
+<span class="material-icons">send</span>
+</button>
+</div>
+</footer>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center pb-4 pt-2">
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center nav-inactive" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center nav-active px-4 pt-2" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+<script>
+    // This is to simulate the layout shift from the keyboard
+    const mainContent = document.querySelector('main');
+    const footer = document.querySelector('footer');
+    const nav = document.querySelector('.fixed.bottom-0');
+    // As we can't detect the real keyboard, let's toggle visibility of nav for demonstration
+    // footer.addEventListener('focusin', () => {
+    //   nav.classList.add('hidden');
+    // });
+    // footer.addEventListener('focusout', () => {
+    //    nav.classList.remove('hidden');
+    // });
+    // Hiding the nav as the chat input is part of the screen, not the system keyboard overlay
+     nav.classList.add('hidden');
+     // The footer will be the chat input area instead
+     footer.classList.remove('p-4', 'border-t', 'border-gray-700', 'bg-black');
+     footer.classList.add('p-2', 'bg-black', 'border-t', 'border-gray-700');
+     const body = document.querySelector('body');
+     body.classList.remove('pb-20');
+     body.classList.add('pb-24'); // Adjust padding to make space for chat input
+     footer.classList.add('fixed', 'bottom-0', 'left-0', 'right-0');
+     // Now, for the real navigation bar
+     const mainNav = document.createElement('div');
+     mainNav.className = "fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2";
+     mainNav.innerHTML = `
+      <a class="text-center nav-inactive" href="#">
+        <span class="material-icons">home</span>
+        <span class="block text-xs">Home</span>
+      </a>
+      <a class="text-center nav-inactive" href="#">
+        <span class="material-icons">fitness_center</span>
+        <span class="block text-xs">Workout</span>
+      </a>
+      <a class="text-center nav-inactive" href="#">
+        <span class="material-icons">restaurant</span>
+        <span class="block text-xs">Alimentazione</span>
+      </a>
+      <a class="text-center nav-inactive" href="#">
+        <span class="material-icons">trending_up</span>
+        <span class="block text-xs">Progressi</span>
+      </a>
+      <a class="text-center nav-active px-4 pt-2" href="#">
+        <span class="material-icons">chat</span>
+        <span class="block text-xs">Chat</span>
+      </a>
+     `;
+     const input = footer.querySelector('input');
+     input.addEventListener('focus', () => {
+       document.body.removeChild(mainNav);
+       body.style.paddingBottom = '70px'; // Space for input bar
+     });
+     input.addEventListener('blur', () => {
+       document.body.appendChild(mainNav);
+       body.style.paddingBottom = '140px'; // Space for both
+     });
+     document.body.appendChild(mainNav);
+     body.style.paddingBottom = '140px';
+     mainContent.style.paddingBottom = '20px';
+  </script>
+
+</body></html>' pagina libreria esercizi cliente '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Esercizi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1F2937;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            min-height: 100dvh;
+        }
+        .active-tab {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .inactive-tab {
+            color: var(--text-secondary);
+        }
+        .nav-item-active {
+            color: var(--primary-color);
+            border-top: 2px solid var(--primary-color);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-4xl font-bold">Esercizi</h1>
+<button class="bg-[var(--surface-color)] p-2 rounded-full">
+<span class="material-icons">search</span>
+</button>
+</div>
+<div class="flex border-b border-gray-700 mb-6">
+<button class="flex-1 py-3 text-center active-tab font-semibold">Tutti gli esercizi</button>
+<button class="flex-1 py-3 text-center inactive-tab">I miei esercizi</button>
+</div>
+<div class="space-y-4">
+<div class="bg-[var(--surface-color)] rounded-lg overflow-hidden">
+<div class="bg-gray-800 aspect-video w-full flex items-center justify-center">
+<span class="material-icons text-gray-500" style="font-size: 48px;">play_circle_outline</span>
+</div>
+<div class="p-4">
+<h2 class="text-xl font-bold">Panca Piana</h2>
+<p class="text-sm text-[var(--text-secondary)]">Petto • Bilanciere</p>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg overflow-hidden">
+<div class="bg-gray-800 aspect-video w-full flex items-center justify-center">
+<span class="material-icons text-gray-500" style="font-size: 48px;">play_circle_outline</span>
+</div>
+<div class="p-4">
+<h2 class="text-xl font-bold">Squat</h2>
+<p class="text-sm text-[var(--text-secondary)]">Gambe • Bilanciere</p>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg overflow-hidden">
+<div class="bg-gray-800 aspect-video w-full flex items-center justify-center">
+<span class="material-icons text-gray-500" style="font-size: 48px;">play_circle_outline</span>
+</div>
+<div class="p-4">
+<h2 class="text-xl font-bold">Stacco da terra</h2>
+<p class="text-sm text-[var(--text-secondary)]">Schiena • Bilanciere</p>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg overflow-hidden">
+<div class="bg-gray-800 aspect-video w-full flex items-center justify-center">
+<span class="material-icons text-gray-500" style="font-size: 48px;">play_circle_outline</span>
+</div>
+<div class="p-4">
+<h2 class="text-xl font-bold">Lento Avanti</h2>
+<p class="text-sm text-[var(--text-secondary)]">Spalle • Bilanciere</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center nav-item-active px-4 pt-2" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+
+</body></html>' pagina cliente libreria alimenti '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Libreria Alimenti</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1F2937;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            min-height: 100dvh;
+        }
+        .active-tab {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .inactive-tab {
+            color: var(--text-secondary);
+        }
+        .nav-item-active {
+            color: var(--primary-color);
+            border-top: 2px solid var(--primary-color);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-20">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-4xl font-bold">Libreria</h1>
+<button class="bg-[var(--surface-color)] p-2 rounded-full">
+<span class="material-icons">search</span>
+</button>
+</div>
+<div class="flex border-b border-gray-700 mb-6">
+<button class="flex-1 py-3 text-center active-tab font-semibold">Alimenti</button>
+<button class="flex-1 py-3 text-center inactive-tab">Integratori</button>
+<button class="flex-1 py-3 text-center inactive-tab">I miei alimenti</button>
+</div>
+<div class="space-y-4">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Petto di Pollo</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 25g Proteine • 3g Grassi</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Riso Basmati</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 8g Proteine • 78g Carboidrati</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Salmone</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 20g Proteine • 13g Grassi</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Uova</h2>
+<p class="text-sm text-[var(--text-secondary)]">1 grande • 6g Proteine • 5g Grassi</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Avena</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 17g Proteine • 66g Carboidrati</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold">Mandorle</h2>
+<p class="text-sm text-[var(--text-secondary)]">30g • 6g Proteine • 14g Grassi</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Workout</span>
+</a>
+<a class="text-center nav-item-active px-4 pt-2" href="#">
+<span class="material-icons">restaurant</span>
+<span class="block text-xs">Alimentazione</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">trending_up</span>
+<span class="block text-xs">Progressi</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+</div>
+
+</body></html>'  trainer home page '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trainer Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ef4444;
+            --background-color: #000000;
+            --surface-color: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-color: #27272a;
+        }
+        .light-mode {
+            --primary-color: #ef4444;
+            --background-color: #f9fafb;
+            --surface-color: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --accent-color: #f3f4f6;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .theme-toggle-button {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background-color: var(--accent-color);
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: 1px solid var(--text-secondary);
+        }
+        .theme-toggle-button .toggle-dot {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--text-secondary);
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .theme-toggle-button .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 4px;
+        }
+        .theme-toggle-button .material-icons {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+        input:checked+.theme-toggle-button .toggle-dot {
+            transform: translateX(24px);
+        }
+        input:checked+body {
+            --background-color: #f9fafb;
+            --surface-color: #ffffff;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --accent-color: #f3f4f6;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<div>
+<p class="text-sm text-[var(--text-secondary)]">Welcome back,</p>
+<h1 class="text-3xl font-bold">Trainer!</h1>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<input class="sr-only" id="theme-toggle" type="checkbox"/>
+<label class="theme-toggle-button" for="theme-toggle">
+<div class="icons">
+<span class="material-icons">dark_mode</span>
+<span class="material-icons">light_mode</span>
+</div>
+<div class="toggle-dot"></div>
+</label>
+</div>
+<button class="relative">
+<span class="material-icons text-3xl">notifications</span>
+<span class="absolute top-0 right-0 h-2 w-2 bg-[var(--primary-color)] rounded-full"></span>
+</button>
+<img alt="Trainer profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvmeV_W3R0Zgv_E5BuKh8ixfghNYzNQ1uByoDTQHPt7aFRvUjZxaEprIh97ASyoYX5CyXgwoFwflsRn5Ahtzt94IggjedDItJPNkRS5mc7bcMRVOyQ4UgO1gfdDpawjuYk4yIR80YymaudIOLZDHHqJpGH4ui8fDvHvH8pcVKt-eWZqbvv5V9KQg0x2s6lLqlUqsJMC29Y3CCmbVHZKapTgUHFkrSGi4m_B83YvH2hmk46oKbuTDK877c-G_WxwP_TWtRP5u3YOjw"/>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-xl p-4 mb-6">
+<h2 class="font-semibold text-lg mb-3">Quick Stats</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-[var(--accent-color)] p-3 rounded-lg">
+<p class="text-3xl font-bold">48</p>
+<p class="text-sm text-[var(--text-secondary)]">Active Clients</p>
+</div>
+<div class="bg-[var(--accent-color)] p-3 rounded-lg">
+<p class="text-3xl font-bold">12</p>
+<p class="text-sm text-[var(--text-secondary)]">Programs</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h2 class="font-semibold text-lg mb-3">Today's Schedule</h2>
+<div class="space-y-3">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Client Check-in</p>
+<p class="text-sm text-[var(--text-secondary)]">10:00 AM - Alex Johnson</p>
+</div>
+<span class="material-icons text-[var(--primary-color)]">chevron_right</span>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Group Session</p>
+<p class="text-sm text-[var(--text-secondary)]">1:00 PM - HIIT Training</p>
+</div>
+<span class="material-icons text-[var(--primary-color)]">chevron_right</span>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div>
+<p class="font-medium">Program Design</p>
+<p class="text-sm text-[var(--text-secondary)]">3:00 PM - New Client Onboarding</p>
+</div>
+<span class="material-icons text-[var(--primary-color)]">chevron_right</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-semibold text-lg mb-3">Recent Activity</h2>
+<div class="space-y-3">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center space-x-4">
+<img alt="Client profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXSj3LGgnvSoQ3GAv92zJI4gNB4C4fZ34Wph3cWfehs0UtlGofF0K3yskoHdN2i_vPrCseH5YZPftnAQ8CCnma0r1Am_zdFapDyWi0GILX_ymyLeVSHWa0zuxUNefK-jkrmnXbFV31AKRpu6bKUCtGptMDZXok1zRnj1RyrcHi2-1Z4cmaSF7VqTEdGNeTfdrmRgY53c3wOOnJUrSAIMzagCdg_KcTcG3sbHjFtOBtqWM48xdEb_uB5XRjOxl6_yEXVepm7iVL6cM"/>
+<div>
+<p><span class="font-semibold">Sarah L.</span> completed her workout.</p>
+<p class="text-sm text-[var(--text-secondary)]">2 hours ago</p>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center space-x-4">
+<img alt="Client profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3aKfxTNSL3VM-D3bs7yMk4_a4eVLShwsd6psRwskz0VWVDaTJtNC6O8k_T2Xs-0oFiejZFtZ88fxtkTxPrlX3zZGzMEoAjEFbKSN9FXeZMSkXqC80L33gqQlfp-jykHNyEOdX_GM8sy53hkRZirMAS1kD68AyYm0w3DfEqYslXPYKZ1S_gITiizeDShjhSQoYCRUEQcjbthcUx0DaJezh09NYaFaYffxk72MDZo74jN4bk-dDjDFmubDQE3fE2g_Ksa8-VyZgQBg"/>
+<div>
+<p>You have a new message from <span class="font-semibold">Mike P.</span></p>
+<p class="text-sm text-[var(--text-secondary)]">3 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--primary-color)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">groups</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">article</span>
+<span class="block text-xs">Programs</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="block text-xs">Calendar</span>
+</a>
+</div>
+<script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('light-mode');
+            } else {
+                document.body.classList.remove('light-mode');
+            }
+        });
+    </script>
+
+</body></html>' traine modifica profilo '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trainer Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --background-dark: #0D0D0D;
+            --background-light: #1A1A1A;
+            --primary-accent: #4CAF50;--text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --border-color: #2D2D2D;
+            --danger-color: #F44336;
+        }
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .icon-button {
+            @apply flex items-center justify-center w-10 h-10 rounded-full bg-[var(--background-light)];
+        }
+        .profile-stat {
+            @apply text-center;
+        }
+        .profile-stat-value {
+            @apply text-lg font-bold;
+        }
+        .profile-stat-label {
+            @apply text-sm text-[var(--text-secondary)];
+        }
+        .settings-item {
+            @apply flex items-center justify-between py-4;
+        }
+        .settings-item-content {
+            @apply flex items-center space-x-4;
+        }
+        .settings-icon {
+            @apply text-[var(--primary-accent)];
+        }
+    </style>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="p-5">
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-3xl font-bold">Profile</h1>
+<button class="icon-button">
+<span class="material-icons">settings</span>
+</button>
+</div>
+<div class="flex flex-col items-center mb-6">
+<div class="relative mb-4">
+<img alt="Trainer profile picture" class="w-28 h-28 rounded-full object-cover border-2 border-[var(--primary-accent)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIM_cmwo_5kQt4QLKLZQELRXGNKTBUZf8eC0glWlar8r9bXaBUkNcNfqLu-6IeorE_8BTin49qizOm2ttcCv5H1sN5xUfynHjAKQANiD8BT4AuGc_8jgQAzSFdbdDCbTywtGe9rwbBMLoM6Scash9aKK6nDEEb_iQwkV_U8hxHgBmoxJYG6GDO4DRWteFH4XvT4NTFzZ0ECGtygyJOmEHGg1aiGfLZzRl3dQO6gFI_8NbrahEsTZrsFxaSii0FV3wrwq75v8wvbX0"/>
+<button class="absolute bottom-0 right-0 bg-[var(--primary-accent)] p-2 rounded-full transform translate-y-1/4 translate-x-1/4">
+<span class="material-icons text-base">photo_camera</span>
+</button>
+</div>
+<h2 class="text-2xl font-semibold mt-2">Alex Morgan</h2>
+<p class="text-[var(--text-secondary)]">@alexmorganfit</p>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8 bg-[var(--background-light)] p-4 rounded-2xl">
+<div class="profile-stat">
+<p class="profile-stat-value">150</p>
+<p class="profile-stat-label">Clients</p>
+</div>
+<div class="profile-stat">
+<p class="profile-stat-value">5 yrs</p>
+<p class="profile-stat-label">Experience</p>
+</div>
+<div class="profile-stat">
+<p class="profile-stat-value">4.9 <span class="text-yellow-400">★</span></p>
+<p class="profile-stat-label">Rating</p>
+</div>
+</div>
+<div class="bg-[var(--background-light)] rounded-2xl">
+<a class="settings-item px-4 border-b border-[var(--border-color)]" href="#">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">account_circle</span>
+<span>Account Details</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</a>
+<a class="settings-item px-4 border-b border-[var(--border-color)]" href="#">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">payments</span>
+<span>Billing &amp; Subscriptions</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</a>
+<a class="settings-item px-4 border-b border-[var(--border-color)]" href="#">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">notifications</span>
+<span>Notification Settings</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</a>
+<a class="settings-item px-4" href="#">
+<div class="settings-item-content">
+<span class="material-icons settings-icon">help_outline</span>
+<span>Help Center</span>
+</div>
+<span class="material-icons text-[var(--text-secondary)]">chevron_right</span>
+</a>
+</div>
+<div class="mt-8">
+<button class="w-full flex items-center justify-center space-x-2 py-3 text-lg text-[var(--danger-color)] bg-[var(--background-light)] rounded-xl font-semibold">
+<span class="material-icons">logout</span>
+<span>Log Out</span>
+</button>
+</div>
+</div>
+</body></html>'  pagina trainer gestione clienti '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Clients</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ef4444;
+            --background-color: #000000;
+            --surface-color: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-color: #27272a;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Clients</h1>
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-lg flex items-center">
+<span class="material-icons mr-2">add</span>
+                New Client
+            </button>
+</div>
+<div class="relative mb-6">
+<input class="w-full bg-[var(--surface-color)] border-none rounded-lg pl-10 pr-4 py-2 text-white placeholder-gray-500" placeholder="Search clients..." type="text"/>
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">search</span>
+</div>
+<div class="space-y-4">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="Client profile picture" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvmeV_W3R0Zgv_E5BuKh8ixfghNYzNQ1uByoDTQHPt7aFRvUjZxaEprIh97ASyoYX5CyXgwoFwflsRn5Ahtzt94IggjedDItJPNkRS5mc7bcMRVOyQ4UgO1gfdDpawjuYk4yIR80YymaudIOLZDHHqJpGH4ui8fDvHvH8pcVKt-eWZqbvv5V9KQg0x2s6lLqlUqsJMC29Y3CCmbVHZKapTgUHFkrSGi4m_B83YvH2hmk46oKbuTDK877c-G_WxwP_TWtRP5u3YOjw"/>
+<div>
+<p class="font-semibold text-lg">Alex Johnson</p>
+<p class="text-sm text-[var(--text-secondary)]">Active</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="text-[var(--text-secondary)] hover:text-white">
+<span class="material-icons">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="Client profile picture" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXSj3LGgnvSoQ3GAv92zJI4gNB4C4fZ34Wph3cWfehs0UtlGofF0K3yskoHdN2i_vPrCseH5YZPftnAQ8CCnma0r1Am_zdFapDyWi0GILX_ymyLeVSHWa0zuxUNefK-jkrmnXbFV31AKRpu6bKUCtGptMDZXok1zRnj1RyrcHi2-1Z4cmaSF7VqTEdGNeTfdrmRgY53c3wOOnJUrSAIMzagCdg_KcTcG3sbHjFtOBtqWM48xdEb_uB5XRjOxl6_yEXVepm7iVL6cM"/>
+<div>
+<p class="font-semibold text-lg">Sarah Lee</p>
+<p class="text-sm text-[var(--text-secondary)]">Active</p>
+</div>
+</div>
+<div class="relative group">
+<button class="text-[var(--text-secondary)] hover:text-white">
+<span class="material-icons">more_vert</span>
+</button>
+<div class="absolute right-0 mt-2 w-48 bg-[var(--accent-color)] rounded-md shadow-lg py-1 z-20 hidden group-focus-within:block focus:outline-none" tabindex="-1">
+<a class="flex items-center px-4 py-2 text-sm text-white hover:bg-gray-700" href="#">
+<span class="material-icons mr-3">edit</span>
+                            Edit
+                        </a>
+<a class="flex items-center px-4 py-2 text-sm text-red-500 hover:bg-gray-700" href="#">
+<span class="material-icons mr-3">delete</span>
+                            Delete
+                        </a>
+</div>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="Client profile picture" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3aKfxTNSL3VM-D3bs7yMk4_a4eVLShwsd6psRwskz0VWVDaTJtNC6O8k_T2Xs-0oFiejZFtZ88fxtkTxPrlX3zZGzMEoAjEFbKSN9FXeZMSkXqC80L33gqQlfp-jykHNyEOdX_GM8sy53hkRZirMAS1kD68AyYm0w3DfEqYslXPYKZ1S_gITiizeDShjhSQoYCRUEQcjbthcUx0DaJezh09NYaFaYffxk72MDZo74jN4bk-dDjDFmubDQE3fE2g_Ksa8-VyZgQBg"/>
+<div>
+<p class="font-semibold text-lg">Mike Peterson</p>
+<p class="text-sm text-[var(--text-secondary)]">Inactive</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="text-[var(--text-secondary)] hover:text-white">
+<span class="material-icons">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img alt="Client profile picture" class="w-12 h-12 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACmtDCEZXwbdm_9e6Du5uUu9Nl7kd5yPCF4Wabef7UEVWuJYxNs5qEo6fm7qk0sbdJq2ZMoR908IDkhEl4CpD4AM20PQnAyq5iauGV-YUoss7pqDWdF_TRCNp06X8GgYbIYjJT9tVdKFreMkYJPl8U12KLVG4Qc2aWuhDigL7zfKv_pB2xfyNqp4EMjE1p6z1YrJM25pMcY5YOzFeZLOMRmnXXLhdOz5s3LxK50_jNl8dWKVWNuQd3Z5xxTweo-aRKZNuPEILIXck"/>
+<div>
+<p class="font-semibold text-lg">Jessica Chen</p>
+<p class="text-sm text-[var(--text-secondary)]">Active</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<button class="text-[var(--text-secondary)] hover:text-white">
+<span class="material-icons">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--primary-color)]" href="#">
+<span class="material-icons">groups</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">article</span>
+<span class="block text-xs">Programs</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="block text-xs">Calendar</span>
+</a>
+</div>
+
+</body></html>' pagina trainer gestione programmi allenamento e alimentari suddivisi '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Programs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ef4444;
+            --background-color: #000000;
+            --surface-color: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-color: #27272a;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Programs</h1>
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-lg flex items-center">
+<span class="material-icons mr-2">add</span>
+                New Program
+            </button>
+</div>
+<div class="space-y-6">
+<div>
+<h2 class="text-xl font-semibold mb-4">Workout Plans</h2>
+<div class="space-y-3">
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">Full Body Blast</p>
+<p class="text-sm text-[var(--text-secondary)]">3 workouts/week</p>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">Upper Body Strength</p>
+<p class="text-sm text-[var(--text-secondary)]">2 workouts/week</p>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">HIIT Cardio</p>
+<p class="text-sm text-[var(--text-secondary)]">4 workouts/week</p>
+</div>
+<div class="border-2 border-dashed border-gray-600 rounded-lg p-3 text-center text-gray-400 hover:bg-gray-800 cursor-pointer">
+<span class="material-icons">add</span>
+<p class="text-sm">New Workout</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-xl font-semibold mb-4">Nutritional Plans</h2>
+<div class="space-y-3">
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">Lean Muscle Gain</p>
+<p class="text-sm text-[var(--text-secondary)]">2500 kcal</p>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">Fat Loss Shred</p>
+<p class="text-sm text-[var(--text-secondary)]">1800 kcal</p>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-3">
+<p class="font-semibold">Vegan Bulk</p>
+<p class="text-sm text-[var(--text-secondary)]">3000 kcal</p>
+</div>
+<div class="border-2 border-dashed border-gray-600 rounded-lg p-3 text-center text-gray-400 hover:bg-gray-800 cursor-pointer">
+<span class="material-icons">add</span>
+<p class="text-sm">New Meal Plan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">groups</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--primary-color)]" href="#">
+<span class="material-icons">article</span>
+<span class="block text-xs">Programs</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="block text-xs">Calendar</span>
+</a>
+</div>
+
+</body></html>'  pagina trainer chat '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ef4444;
+            --background-color: #000000;
+            --surface-color: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-color: #27272a;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Chat</h1>
+<button class="text-white">
+<span class="material-icons">search</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-[var(--surface-color)] cursor-pointer">
+<img alt="avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqQGXYN0bkk-QFCGSbeeLQYcUKX35C5q8RAF-NiBGMjkOnuj-Z_7oM2MDhiNBi_ccGHx38tsBzVTmdp50ua5XQDGsV4ZZQzNanjmKV2p3vnZHN5d8bxlYmJGmzaZsIlt1a6YHifOQmGKWBJp6DsmlShkHCcqhVhHJeUTbVwDvp5zyhf4NLlE30neCdFNbHU4Wgepp8XjPcz3n2qRziPewje1CM1mQdLBeIJ7rvEfsPufsBIT_Lb0Ra-Em_tufbY6ZuI_gWGRbE32E"/>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-semibold">Sarah J.</p>
+<p class="text-xs text-[var(--text-secondary)]">2 min ago</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-[var(--text-secondary)]">Awesome, thanks!</p>
+<span class="bg-[var(--primary-color)] text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">1</span>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-[var(--surface-color)] cursor-pointer">
+<img alt="avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbfJibbxXusyoaX5_aHohHi3fNwaAjONuotXLZWuYpt2bYmKDZs6zvFLrq55bI0zQUm7voIGskfGaLamXvFAvKk_8pTynoF9EmZqrscB_8foHRGSldXbblVzNEIvpyMgqporBsdyd9AKIg5N728BnuVMRyWpuJPMnGCVev4EbXkvfyH-zLf1CSoylCDDOzq_7EEl6M1cOgCyd4jAx-GIphd7S9wAPdpzAB628Eyv-3dDJ6eOdZDxxb5TOPaiix-elfatb637K-xMU"/>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-semibold">Mike T.</p>
+<p class="text-xs text-[var(--text-secondary)]">1:15 PM</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)]">Got it, will do.</p>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-[var(--surface-color)] cursor-pointer">
+<img alt="avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFKSUKfg7iiI9AfkQ1CB2P-PN_h0M7luHLOWMFfX3MYdD0wTj608I9eizDlJCVsGQkuh6FidgMxtLUnZPG-63jtqTKJZb9aT1T0YEOuImu7cLWKLySasIVPOKxkjuOMZqgWUiGc1O1zSISdDtsVWgO6tIVEUSWdwq88sqUSUzomBbuf9Kz5pHRpxCYQwLEn7ZDZGnoskt7R_jTXUVu3eitWUgJjHy2SVyQlxfsqphNJNkD6by5n6vFSmi8hDlKNLkUkVYhDcuDiD8"/>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-semibold">Emily C.</p>
+<p class="text-xs text-[var(--text-secondary)]">Yesterday</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)]">Can you check my form?</p>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-[var(--surface-color)] cursor-pointer">
+<img alt="avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU2VGvBKcp3XWsWJ2s8qFgXDmqXYEyCKT5QafrYWiGmXmIInT8Eznjh-Qg6_7dYERE3jYBpCrcqmYNykoPPcVZaKYZIlC-lA_lDwQ4M76U-0auQBypo1x1-iBteBOnhGLeuJyh0uKJlqeImtYQkpUlhixIUiYT0QmToVnxmgs1Tn6HW1mYawIpzwQOhHBFOdve6fF3mASgmHHlRfalV448_tre7tvPoPII-d-JYMb0geWvCBXigt6FiaGCnY26QKGNgoes3IkLdvE"/>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-semibold">David L.</p>
+<p class="text-xs text-[var(--text-secondary)]">Yesterday</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)]">Feeling great after that workout!</p>
+</div>
+</div>
+<div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-[var(--surface-color)] cursor-pointer">
+<img alt="avatar" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_7IltoqZcKfWBdgZd_IBOas0Sa2C5NLBWGZdUBWUDo91zm5i5NvjLEcm0q8uDWkpFG1QtdG4I0qGuGSHCam1ad67GjcuNKrs8jiWNmm83CcySUxhNq3UmGcRAx2n0UEMs2l9XMV5KZY3Ot5lGzHvIpek9Awi5Ysnn1RAt5IxuUMeg39sGTCepuMM86Zh3Hcpml94I-a362uOXAHpWR73B9LaI5w9O2l-WKhmrZlQtoz8C05z-qsvV4aXimX76c05TeQqOSb2y_SU"/>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<p class="font-semibold">Jessica P.</p>
+<p class="text-xs text-[var(--text-secondary)]">3/15/24</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)]">Photo</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">groups</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">article</span>
+<span class="block text-xs">Programs</span>
+</a>
+<a class="text-center text-[var(--primary-color)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="block text-xs">Calendar</span>
+</a>
+</div>
+
+</body></html>' pagina trainer calendario appuntamenti '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #ef4444;
+            --background-color: #000000;
+            --surface-color: #1f2937;
+            --text-primary: #ffffff;
+            --text-secondary: #9ca3af;
+            --accent-color: #27272a;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Calendar</h1>
+<button class="text-white">
+<span class="material-icons">add</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] p-4 rounded-lg">
+<div class="flex justify-between items-center mb-4">
+<button class="text-white">
+<span class="material-icons">chevron_left</span>
+</button>
+<h2 class="text-lg font-semibold">March 2024</h2>
+<button class="text-white">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 text-center text-sm text-[var(--text-secondary)] mb-2">
+<span>Sun</span>
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+</div>
+<div class="grid grid-cols-7 text-center">
+<span class="text-[var(--text-secondary)]">25</span>
+<span class="text-[var(--text-secondary)]">26</span>
+<span class="text-[var(--text-secondary)]">27</span>
+<span class="text-[var(--text-secondary)]">28</span>
+<span class="text-[var(--text-secondary)]">29</span>
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span class="relative">
+                    5
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--primary-color)] rounded-full"></span>
+</span>
+<span>6</span>
+<span>7</span>
+<span>8</span>
+<span>9</span>
+<span>10</span>
+<span>11</span>
+<span class="relative">
+                    12
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--primary-color)] rounded-full"></span>
+</span>
+<span>13</span>
+<span>14</span>
+<span class="bg-[var(--primary-color)] text-black rounded-full w-8 h-8 flex items-center justify-center mx-auto">15</span>
+<span>16</span>
+<span>17</span>
+<span>18</span>
+<span>19</span>
+<span>20</span>
+<span>21</span>
+<span>22</span>
+<span class="relative">
+                    23
+                     <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-[var(--primary-color)] rounded-full"></span>
+</span>
+<span>24</span>
+<span>25</span>
+<span>26</span>
+<span>27</span>
+<span>28</span>
+<span>29</span>
+<span>30</span>
+<span>31</span>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-xl font-semibold mb-4">Upcoming</h3>
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-16 bg-[var(--primary-color)] rounded-full"></div>
+<div class="flex-1">
+<p class="font-semibold">Leg Day with Sarah J.</p>
+<p class="text-sm text-[var(--text-secondary)]">10:00 AM - 11:00 AM</p>
+</div>
+<img alt="avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqQGXYN0bkk-QFCGSbeeLQYcUKX35C5q8RAF-NiBGMjkOnuj-Z_7oM2MDhiNBi_ccGHx38tsBzVTmdp50ua5XQDGsV4ZZQzNanjmKV2p3vnZHN5d8bxlYmJGmzaZsIlt1a6YHifOQmGKWBJp6DsmlShkHCcqhVhHJeUTbVwDvp5zyhf4NLlE30neCdFNbHU4Wgepp8XjPcz3n2qRziPewje1CM1mQdLBeIJ7rvEfsPufsBIT_Lb0Ra-Em_tufbY6ZuI_gWGRbE32E"/>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-16 bg-blue-500 rounded-full"></div>
+<div class="flex-1">
+<p class="font-semibold">Check-in with Mike T.</p>
+<p class="text-sm text-[var(--text-secondary)]">2:00 PM - 2:30 PM</p>
+</div>
+<img alt="avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbfJibbxXusyoaX5_aHohHi3fNwaAjONuotXLZWuYpt2bYmKDZs6zvFLrq55bI0zQUm7voIGskfGaLamXvFAvKk_8pTynoF9EmZqrscB_8foHRGSldXbblVzNEIvpyMgqporBsdyd9AKIg5N728BnuVMRyWpuJPMnGCVev4EbXkvfyH-zLf1CSoylCDDOzq_7EEl6M1cOgCyd4jAx-GIphd7S9wAPdpzAB628Eyv-3dDJ6eOdZDxxb5TOPaiix-elfatb637K-xMU"/>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-16 bg-green-500 rounded-full"></div>
+<div class="flex-1">
+<p class="font-semibold">Nutrition Plan Review</p>
+<p class="text-sm text-[var(--text-secondary)]">4:00 PM</p>
+</div>
+<div class="w-10 h-10"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2 z-10">
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Home</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">groups</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">article</span>
+<span class="block text-xs">Programs</span>
+</a>
+<a class="text-center text-[var(--text-secondary)]" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Chat</span>
+</a>
+<a class="text-center text-[var(--primary-color)]" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="block text-xs">Calendar</span>
+</a>
+</div>
+
+</body></html>'  pagina trainer food library '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1F2937;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        .active-tab {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+        }
+        .inactive-tab {
+            color: var(--text-secondary);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Food Library</h1>
+<div class="flex items-center space-x-2">
+<button class="bg-[var(--surface-color)] p-2 rounded-full">
+<span class="material-icons">search</span>
+</button>
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-full flex items-center">
+<span class="material-icons text-xl mr-1">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<div class="flex border-b border-gray-700 mb-6 text-sm">
+<button class="flex-1 py-3 text-center active-tab">All</button>
+<button class="flex-1 py-3 text-center inactive-tab">Created by me</button>
+<button class="flex-1 py-3 text-center inactive-tab">Favorites</button>
+</div>
+<div class="space-y-4">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Chicken Breast</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 25g Protein • 3g Fat</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Basmati Rice</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 8g Protein • 78g Carbs</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Salmon</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 20g Protein • 13g Fat</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Eggs</h2>
+<p class="text-sm text-[var(--text-secondary)]">1 large • 6g Protein • 5g Fat</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Oats</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 17g Protein • 66g Carbs</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Almonds</h2>
+<p class="text-sm text-[var(--text-secondary)]">30g • 6g Protein • 14g Fat</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Greek Yogurt</h2>
+<p class="text-sm text-[var(--text-secondary)]">100g • 10g Protein • 4g Carbs</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Dashboard</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">group</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--primary-color)] flex flex-col items-center" href="#">
+<div class="w-12 h-1.5 bg-[var(--primary-color)] rounded-t-full absolute -top-1.5"></div>
+<span class="material-icons">restaurant_menu</span>
+<span class="block text-xs">Library</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Messages</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">person</span>
+<span class="block text-xs">Profile</span>
+</a>
+</div>
+
+</body></html>' pagina trainer esercizi libreria '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exercise Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #EF4444;
+            --background-color: #000000;
+            --surface-color: #1F2937;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        .active-tab {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+        }
+        .inactive-tab {
+            color: var(--text-secondary);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex justify-between items-center mb-6">
+<h1 class="text-3xl font-bold">Exercise Library</h1>
+<div class="flex items-center space-x-2">
+<button class="bg-[var(--surface-color)] p-2 rounded-full">
+<span class="material-icons">search</span>
+</button>
+<button class="bg-[var(--primary-color)] text-white px-4 py-2 rounded-full flex items-center">
+<span class="material-icons text-xl mr-1">add</span>
+<span>Add</span>
+</button>
+</div>
+</div>
+<div class="flex border-b border-gray-700 mb-6 text-sm">
+<button class="flex-1 py-3 text-center active-tab">All</button>
+<button class="flex-1 py-3 text-center inactive-tab">Created by me</button>
+<button class="flex-1 py-3 text-center inactive-tab">Favorites</button>
+</div>
+<div class="space-y-4">
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Barbell Bench Press</h2>
+<p class="text-sm text-[var(--text-secondary)]">Chest • Barbell</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Squat</h2>
+<p class="text-sm text-[var(--text-secondary)]">Legs • Barbell</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Deadlift</h2>
+<p class="text-sm text-[var(--text-secondary)]">Back • Barbell</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Overhead Press</h2>
+<p class="text-sm text-[var(--text-secondary)]">Shoulders • Barbell</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Dumbbell Curl</h2>
+<p class="text-sm text-[var(--text-secondary)]">Biceps • Dumbbell</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Leg Press</h2>
+<p class="text-sm text-[var(--text-secondary)]">Legs • Machine</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+<div class="bg-[var(--surface-color)] rounded-lg p-4 flex justify-between items-center">
+<div>
+<h2 class="text-lg font-semibold">Pull Up</h2>
+<p class="text-sm text-[var(--text-secondary)]">Back • Bodyweight</p>
+</div>
+<button>
+<span class="material-icons text-gray-400">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-700 flex justify-around items-center py-2">
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">home</span>
+<span class="block text-xs">Dashboard</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">group</span>
+<span class="block text-xs">Clients</span>
+</a>
+<a class="text-center text-[var(--primary-color)] flex flex-col items-center relative" href="#">
+<div class="w-12 h-1.5 bg-[var(--primary-color)] rounded-t-full absolute -top-1.5"></div>
+<span class="material-icons">fitness_center</span>
+<span class="block text-xs">Library</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">chat</span>
+<span class="block text-xs">Messages</span>
+</a>
+<a class="text-center text-[var(--text-secondary)] flex flex-col items-center" href="#">
+<span class="material-icons">person</span>
+<span class="block text-xs">Profile</span>
+</a>
+</div>
+
+</body></html>' aggiunta esercizi libreria esercizi '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Exercise</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #EF4444;
+      --background-color: #000000;
+      --surface-color: #1F2937;
+      --surface-light: #374151;
+      --text-primary: #FFFFFF;
+      --text-secondary: #9CA3AF;
+    }
+    body {
+      background-color: var(--background-color);
+      color: var(--text-primary);
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .input-field {
+      @apply bg-[var(--surface-color)] border border-[var(--surface-light)] text-[var(--text-primary)] text-base rounded-lg focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] block w-full p-3;
+    }
+    .label-text {
+      @apply block mb-2 text-sm font-medium text-[var(--text-secondary)];
+    }
+    .custom-select {
+        @apply appearance-none bg-[var(--surface-color)] border border-[var(--surface-light)] text-[var(--text-primary)] text-base rounded-lg focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] block w-full p-3;
+    }
+    .select-arrow {
+        @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[var(--text-secondary)];
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex items-center mb-6">
+<button class="mr-4">
+<span class="material-icons text-2xl">arrow_back_ios</span>
+</button>
+<h1 class="text-2xl font-bold">Add Exercise</h1>
+</div>
+<div class="space-y-6">
+<div>
+<label class="label-text" for="exercise-name">Exercise Name</label>
+<input class="input-field" id="exercise-name" placeholder="e.g. Barbell Bench Press" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="label-text" for="muscle-group">Muscle group</label>
+<div class="relative">
+<select class="custom-select" id="muscle-group">
+<option>Chest</option>
+<option>Back</option>
+<option>Legs</option>
+<option>Shoulders</option>
+<option>Biceps</option>
+<option>Triceps</option>
+</select>
+<div class="select-arrow">
+<span class="material-icons">unfold_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text" for="equipment">Equipment</label>
+<div class="relative">
+<select class="custom-select" id="equipment">
+<option>Barbell</option>
+<option>Dumbbell</option>
+<option>Machine</option>
+<option>Bodyweight</option>
+<option>Kettlebell</option>
+</select>
+<div class="select-arrow">
+<span class="material-icons">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text">Media</label>
+<div class="flex space-x-4">
+<div class="w-24 h-24 bg-[var(--surface-color)] border-2 border-dashed border-[var(--surface-light)] rounded-lg flex items-center justify-center">
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons">add_photo_alternate</span>
+<span class="text-xs mt-1">Image</span>
+</button>
+</div>
+<div class="w-24 h-24 bg-[var(--surface-color)] border-2 border-dashed border-[var(--surface-light)] rounded-lg flex items-center justify-center">
+<button class="flex flex-col items-center text-[var(--text-secondary)]">
+<span class="material-icons">videocam</span>
+<span class="text-xs mt-1">Video</span>
+</button>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text" for="instructions">Instructions</label>
+<textarea class="input-field" id="instructions" placeholder="Add exercise instructions..." rows="4"></textarea>
+</div>
+<div>
+<label class="label-text" for="notes">Private Notes</label>
+<textarea class="input-field" id="notes" placeholder="Add private notes, only visible to you..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-[var(--background-color)] border-t border-[var(--surface-color)]">
+<button class="w-full bg-[var(--primary-color)] text-white font-bold py-3 px-4 rounded-lg">
+      Save Exercise
+    </button>
+</div>
+
+</body></html>' pagina trainer aggiunta alimento o integratore a libreria alimenti '<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Food / Supplement</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #EF4444;
+      --background-color: #000000;
+      --surface-color: #1F2937;
+      --surface-light: #374151;
+      --text-primary: #FFFFFF;
+      --text-secondary: #9CA3AF;
+    }
+    body {
+      background-color: var(--background-color);
+      color: var(--text-primary);
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .input-field {
+      @apply bg-[var(--surface-color)] border border-[var(--surface-light)] text-[var(--text-primary)] text-base rounded-lg focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] block w-full p-3;
+    }
+    .label-text {
+      @apply block mb-2 text-sm font-medium text-[var(--text-secondary)];
+    }
+    .custom-select {
+        @apply appearance-none bg-[var(--surface-color)] border border-[var(--surface-light)] text-[var(--text-primary)] text-base rounded-lg focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] block w-full p-3;
+    }
+    .select-arrow {
+        @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[var(--text-secondary)];
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="pb-24">
+<div class="p-4">
+<div class="flex items-center mb-6">
+<button class="mr-4">
+<span class="material-icons text-2xl">arrow_back_ios</span>
+</button>
+<h1 class="text-2xl font-bold">Add Food / Supplement</h1>
+</div>
+<div class="space-y-6">
+<div>
+<label class="label-text" for="item-name">Name</label>
+<input class="input-field" id="item-name" placeholder="e.g. Grilled Chicken Breast" type="text"/>
+</div>
+<div>
+<label class="label-text" for="brand-name">Brand (Optional)</label>
+<input class="input-field" id="brand-name" placeholder="e.g. Kirkland Signature" type="text"/>
+</div>
+<div class="flex items-center justify-between">
+<label class="label-text" for="barcode-scanner">Scan Barcode</label>
+<button class="text-[var(--primary-color)]">
+<span class="material-icons text-3xl">qr_code_scanner</span>
+</button>
+</div>
+<div>
+<label class="label-text">Serving Size</label>
+<div class="grid grid-cols-2 gap-4">
+<input class="input-field" id="serving-size-value" placeholder="100" type="number"/>
+<div class="relative">
+<select class="custom-select" id="serving-size-unit">
+<option>g</option>
+<option>ml</option>
+<option>oz</option>
+<option>cup</option>
+<option>tbsp</option>
+</select>
+<div class="select-arrow">
+<span class="material-icons">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text">Macronutrients per serving</label>
+<div class="grid grid-cols-3 gap-4">
+<div>
+<label class="label-text text-xs" for="protein">Protein (g)</label>
+<input class="input-field" id="protein" placeholder="31" type="number"/>
+</div>
+<div>
+<label class="label-text text-xs" for="carbs">Carbs (g)</label>
+<input class="input-field" id="carbs" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="label-text text-xs" for="fats">Fats (g)</label>
+<input class="input-field" id="fats" placeholder="3.6" type="number"/>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text">Calories</label>
+<div class="relative">
+<input class="input-field pl-10" id="calories" placeholder="165" type="number"/>
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-icons text-[var(--text-secondary)]">local_fire_department</span>
+</div>
+</div>
+</div>
+<div>
+<label class="label-text" for="notes">Private Notes</label>
+<textarea class="input-field" id="notes" placeholder="Add private notes, only visible to you..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-[var(--background-color)] border-t border-[var(--surface-color)]">
+<button class="w-full bg-[var(--primary-color)] text-white font-bold py-3 px-4 rounded-lg">
+            Add to Library
+        </button>
+</div>
+
+</body></html>' 
+   basandoti su questi design screens crea frontend e backend dell'app che funzioni con le foto e codici delle schermate presenti sulla repo e assicurati che funzioni cosi 'Il personal trainer deve poter :
+Creare e eliminare clienti
+Creare e eliminare programma allenamento con giorni e esercizi com foto e video
+Creare e eliminare piani alimentare con giorni e pasti
+Poter chattare con i clienti
+Vedere come stanno andando gli obiettivi dei clienti
+Poter fare logout
+I clienti devono avere una versione completamente diversa da quella del personal trainer:
+Il cliente deve poter:
+Vedere il suo programma allenamento
+Vedere il suo piano alimentare
+Impostare un obiettivo selezionando data inizio e data fine e una foto del giorno 1 che poi andrà aggiornata giorno dopo giorno per vedere il progresso
+Poter chattare con il personal trainer
+Poter fare logout
+scegliere giorno del programma di allenamento e come evolutionfit club app poter fare live workout
+vedere libreria esercizi e libreria alimenti' implementa poi un database con supabase e l'app deve essere nativa in capacitor. se nont rovi codice o li vedi vuoti o non cpaisci qualcoa cheidimelo che ti dico esattamente come fare
